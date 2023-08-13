@@ -14,8 +14,10 @@ import axios from "axios";
 import { useRouter } from "next/navigation";
 import { Empty } from "@/components/empty";
 import Loader from "@/components/loader";
+import { useProModal } from "@/hooks/use-pro-modal";
 
 const VideoPage = () => {
+  const proModal = useProModal();
   const router = useRouter();
   const [video, setVideo] = useState<string>();
   const form = useForm<z.infer<typeof formSchema>>({
@@ -35,7 +37,9 @@ const VideoPage = () => {
       setVideo(response.data[0]);
       form.reset();
     } catch (error: any) {
-      console.log(error);
+      if (error?.response?.status === 403) {
+        proModal.onOpen();
+      }
     } finally {
       router.refresh();
     }
@@ -90,7 +94,10 @@ const VideoPage = () => {
           {!video && !isLoading && <Empty label="No Video Generated" />}
 
           {video && (
-            <video controls className="w-full aspect-video rounded-lg border bg-black mt-8">
+            <video
+              controls
+              className="w-full aspect-video rounded-lg border bg-black mt-8"
+            >
               <source src={video} />
             </video>
           )}

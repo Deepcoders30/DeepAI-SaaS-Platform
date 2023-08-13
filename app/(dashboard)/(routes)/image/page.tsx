@@ -24,8 +24,10 @@ import {
 } from "@/components/ui/select";
 import { Card, CardFooter } from "@/components/ui/card";
 import Image from "next/image";
+import { useProModal } from "@/hooks/use-pro-modal";
 
-const ConversationPage = () => {
+const ImagePage = () => {
+  const proModal = useProModal();
   const router = useRouter();
   const [images, setImages] = useState<string[]>([]);
 
@@ -44,11 +46,13 @@ const ConversationPage = () => {
       setImages([]);
       const response = await axios.post("/api/image", values);
       const urls = response.data.map((image: { url: string }) => image.url);
-      
-      setImages(urls)
+
+      setImages(urls);
       form.reset();
     } catch (error: any) {
-      console.log(error);
+      if (error?.response?.status === 403) {
+        proModal.onOpen();
+      }
     } finally {
       router.refresh();
     }
@@ -185,4 +189,4 @@ const ConversationPage = () => {
   );
 };
 
-export default ConversationPage;
+export default ImagePage;
