@@ -14,7 +14,7 @@ export async function GET() {
     if (!userId || !user) {
       return new NextResponse("Unauthorized", { status: 401 });
     }
-
+                                                                                                                                
     const userSubscription = await prismadb.userSubscription.findUnique({
       where: {
         userId: userId,
@@ -28,7 +28,7 @@ export async function GET() {
       });
       return new NextResponse(JSON.stringify({ url: stripeSession.url }));
     }
- console.log("cc start")
+
     const stripeSession = await stripe.checkout.sessions.create({
       success_url: settingsUrl,
       cancel_url: settingsUrl,
