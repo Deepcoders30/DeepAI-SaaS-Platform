@@ -1,7 +1,7 @@
 "use client";
-
+import { toast } from "react-hot-toast";
 import Heading from "@/components/heading";
-import { Code, Divide } from "lucide-react";
+import { Code } from "lucide-react";
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import * as z from "zod";
@@ -49,6 +49,8 @@ const CodePage = () => {
     } catch (error: any) {
       if (error?.response?.status === 403) {
         proModal.onOpen();
+      } else {
+        toast.error("Something went wrong");
       }
     } finally {
       router.refresh();

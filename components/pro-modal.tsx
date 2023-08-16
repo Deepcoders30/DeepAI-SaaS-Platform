@@ -8,6 +8,7 @@ import {
   DialogHeader,
   DialogTitle,
 } from "@/components/ui/dialog";
+import { toast } from "react-hot-toast";
 import { useProModal } from "@/hooks/use-pro-modal";
 import { Badge } from "@/components/ui/badge";
 import { Check, MessageSquare, Zap } from "lucide-react";
@@ -63,7 +64,7 @@ const ProModal = () => {
       const response = await axios.get("/api/stripe");
       window.location.href = response.data.url;
     } catch (error) {
-      console.log(error, "STRIPE_CLIENT_ERROR");
+      toast.error("Something went wrong");
     } finally {
       setLoading(false);
     }
@@ -100,6 +101,7 @@ const ProModal = () => {
           </DialogHeader>
           <DialogFooter>
             <Button
+              disabled={loading}
               onClick={onSubscribe}
               size="lg"
               variant="premium"
