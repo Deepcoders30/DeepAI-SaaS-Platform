@@ -4,7 +4,7 @@ import { headers } from "next/headers";
 import prismadb from "@/lib/prismadb";
 import { stripe } from "@/lib/stripe";
 
-//we cant use clerk here because this webhook is running independtly of our application
+//we cant use clerk here because this webhook is running independently of our application
 
 export async function POST(req: Request) {
   const body = await req.text();
