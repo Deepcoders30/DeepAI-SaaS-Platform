@@ -1,5 +1,5 @@
 # DEEP AI SAAS PLATFORM
-## Full Stack SaaS AI Platform built with Next.js 13, offering powerful features including Conversation, Image, Code, Music, and Video Generation using OpenAI and Replicate APIs
+### Full Stack SaaS AI Platform built with Next.js 13, offering powerful features including Conversation, Image, Code, Music, and Video Generation using OpenAI and Replicate APIs
 
 
 
@@ -24,7 +24,7 @@ Features:
 ### Cloning the repository
 
 ```shell
-git clone https://github.com/AntonioErdeljac/next13-ai-saas.git
+git clone https://github.com/Deepcoders30/DeepAI-SaasS-Platform.git
 ```
 
 ### Install packages
