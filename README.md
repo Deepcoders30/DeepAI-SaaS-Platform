@@ -1,20 +1,21 @@
-# Build a SaaS AI Platform with Next.js 13, React, Tailwind, Prisma, Stripe | Full Tutorial 2023
+# DEEP AI SAAS PLATFORM
+## Full Stack SaaS AI Platform built with Next.js 13, offering powerful features including Conversation, Image, Code, Music, and Video Generation using OpenAI and Replicate APIs
 
 
 
 Features:
 
-- Full responsiveness
-- Clerk Authentication (Email, Google, 9+ Social Logins)
-- Client form validation and handling using react-hook-form
-- Server error handling using react-toast
-- Image Generation Tool (Open AI)
-- Video Generation Tool (Replicate AI)
-- Conversation Generation Tool (Open AI)
-- Music Generation Tool (Replicate AI)
-- Page loading state
-- Stripe monthly subscription
-- Free tier with API limiting
+- Complete responsiveness
+- User authentication with Clerk (Email, Google, and over 9 Social Logins)
+- Utilization of react-hook-form for client-side form validation and management
+- Server error handling integrated with react-toast
+- Tool for Generating Images (Powered by Open AI)
+- Tool for Generating Videos (Powered by Replicate AI)
+- Tool for Generating Conversations (Powered by Open AI)
+- Tool for Generating Music (Powered by Replicate AI)
+- Indication of page loading status
+- Stripe-based monthly subscription system
+- Inclusion of a free tier with API usage restrictions
 
 ### Prerequisites
 
