@@ -6,7 +6,7 @@
 ### Features:
 
 - Complete responsiveness
-- User authentication with Clerk (Email, Google, and over 9 Social Logins)
+- User authentication with Clerk.
 - Utilization of react-hook-form for client-side form validation and management
 - Server error handling integrated with react-toast
 - Tool for Generating Images (Powered by Open AI)
