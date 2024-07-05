@@ -3,7 +3,7 @@ Full Stack SaaS AI Platform built with Next.js 13, offering powerful features in
 
 
 
-### Features:
+## Features
 
 - Complete responsiveness
 - User authentication with Clerk.
@@ -16,6 +16,10 @@ Full Stack SaaS AI Platform built with Next.js 13, offering powerful features in
 - Indication of page loading status
 - Stripe-based monthly subscription system
 - Inclusion of a free tier with API usage restrictions
+
+## Getting Started
+
+Instructions on setting up your project locally. To get a local copy up and running, follow these steps
 
 ### Prerequisites
 
