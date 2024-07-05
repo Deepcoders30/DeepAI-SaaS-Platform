@@ -1,5 +1,5 @@
 # DEEP AI SAAS PLATFORM
-Full Stack SaaS AI Platform built with Next.js 13, offering powerful features including Conversation, Image, Code, Music, and Video Generation using OpenAI and Replicate APIs
+This is a comprehensive SaaS application that offers a suite of AI-powered tools for content creation and management. It features complete responsiveness, user authentication with Clerk, and utilizes react-hook-form for client-side form validation. The application integrates server error handling with react-toast and includes tools for generating images, videos, conversations, and music powered by OpenAI and Replicate AI. It also provides a Stripe-based monthly subscription system with a free tier and API usage restrictions.
 
 
 
