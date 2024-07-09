@@ -65,6 +65,7 @@ NEXT_PUBLIC_APP_URL="http://localhost:3000"
 Add MySQL Database (I used Aiven.io MySQL DB)
 
 ```shell
+npx prisma generate
 npx prisma db push
 
 ```
